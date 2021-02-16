@@ -1,0 +1,52 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+
+.card {
+  width: 320px;
+  height: 500px;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.Hearts span:before {
+  color: red;
+  content: "\2665";
+}
+
+.Diamonds span:before {
+  content: "\2666";
+  color: red;
+}
+
+.Spades span:before {
+  color: black;
+  content: "\2660";
+}
+
+.Clubs span:before {
+  color: black;
+  content: "\2663";
+}
+
+#cardNumber {
+  font-size: 130px;
+  font-family: serif;
+}
+
+.Hearts #cardNumber,
+.Diamonds #cardNumber {
+  color: red;
+}
+
+.Spades #cardNumber,
+.Clubs #cardNumber {
+  color: black;
+}
+
+.footer {
+  transform: rotate(180deg);
+}
