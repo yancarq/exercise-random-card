@@ -7,7 +7,7 @@ import "./assets/img/4geeks.ico";
 
 let cardSuit;
 let cardNumber;
-//let suitArray = ["Hearts", "Diamonds", "Spades", "Clubs"];
+
 let numberArray = ["A", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
 window.onload = function() {
@@ -18,11 +18,10 @@ window.onload = function() {
 };
 
 function DrawCard(cardSuit, cardNumber) {
-  let card = document.querySelector(".card");
-  let bodyNumber = document.querySelector("#cardNumber");
-  // let footSuit = document.querySelector("#cardSuitFoot");
+  let card = document.querySelector(".card"); // obtiene el objeto de la clase card
+  let bodyNumber = document.querySelector("#cardNumber"); //obtiene el objeto para agregar el numero
 
-  let suit = "";
+  let suit = ""; // seleccionar el tipo de palo o suit que se va a mostrar
   switch (cardSuit) {
     case 1:
       suit = "Hearts";
@@ -40,8 +39,7 @@ function DrawCard(cardSuit, cardNumber) {
       break;
   }
 
-  card.classList.add(suit);
-  bodyNumber.innerHTML = numberArray[cardNumber];
-  //bodyNumber.classList.add(suit);
-  //footSuit.classList.add(suit);
+  card.classList.add(suit); //agregar la clase al div principal;
+  bodyNumber.innerHTML = numberArray[cardNumber]; //obtener el numero aleatorio y agregarlo como texto al p numberCard
+
 }
